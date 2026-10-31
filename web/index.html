@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#12100E">
+<title>Comic 8muses</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+<div id="gate" class="gate">
+  <div class="gate-box">
+    <div class="gate-mark">18<span>+</span></div>
+    <h1>Nội dung người lớn</h1>
+    <p class="gate-lead">App hiển thị truyện tranh khiêu dâm dành cho người từ 18 tuổi trở lên.</p>
+    <p class="gate-small">Bằng việc tiếp tục, bạn xác nhận mình đã đủ 18 tuổi và tự nguyện xem nội dung này. App không có tài khoản, không thu thập dữ liệu cá nhân; mọi thứ lưu trên máy.</p>
+    <button id="gate-yes" class="btn primary">Tôi đã đủ 18 tuổi</button>
+    <button id="gate-no" class="btn ghost">Tôi chưa đủ 18</button>
+  </div>
+</div>
+
+<div id="app" class="app" hidden>
+  <header id="topbar" class="topbar">
+    <button id="back" class="iconbtn" aria-label="Quay lại">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4.5 7.5 12 15 19.5"/></svg>
+    </button>
+    <div class="titles">
+      <div id="title" class="title">8muses</div>
+      <div id="sub" class="subtitle">Truyện tranh người lớn</div>
+    </div>
+    <button id="cachebtn" class="iconbtn" aria-label="Bộ nhớ đệm">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="6" rx="7.5" ry="3"/><path d="M4.5 6v6c0 1.7 3.4 3 7.5 3s7.5-1.3 7.5-3V6"/><path d="M4.5 12v6c0 1.7 3.4 3 7.5 3s7.5-1.3 7.5-3v-6"/></svg>
+    </button>
+  </header>
+
+  <main id="main" class="main"></main>
+
+  <div id="readerbar" class="readerbar" hidden>
+    <div class="rbline"><i id="barfill"></i></div>
+    <div class="rbrow">
+      <button class="rbbtn pgnum" data-act="jump"><b id="pgnow">1</b><span>/</span><span id="pgtotal">1</span></button>
+      <button class="rbbtn chapbtn" data-act="chapters">Chương</button>
+      <button class="rbbtn grow accent" id="dlbtn" data-act="download">Tải cả bộ</button>
+      <button class="rbbtn" data-act="more" aria-label="Thêm">⋯</button>
+    </div>
+  </div>
+</div>
+
+<div id="sheet" class="sheet" hidden>
+  <div class="sheet-bg" data-act="close-sheet"></div>
+  <div class="sheet-panel">
+    <div class="sheet-head">
+      <h2 id="sheet-title">Bộ nhớ đệm</h2>
+      <button class="iconbtn" data-act="close-sheet" aria-label="Đóng">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div id="sheet-body" class="sheet-body"></div>
+  </div>
+</div>
+
+<div id="toast" class="toast" hidden></div>
+
+<script src="app.js"></script>
+</body>
+</html>
